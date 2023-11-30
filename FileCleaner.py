@@ -6,7 +6,7 @@ directory_path = r"C:\Users\Talal\OneDrive\Pictures\Renaming_python_testfiles"
 
 def rename_files(directory_path):
     # Get today's date in the format YYYY-MM-DD
-    today_date = datetime.datetime.now().strftime("%Y-%m-%d")
+    creation_time = os.path.getctime(file_path)
 
     # List all files in the directory
     files = os.listdir(directory_path)
@@ -14,7 +14,7 @@ def rename_files(directory_path):
     # Iterate through each file
     for file_name in files:
         # Construct the new file name with lowercase and date
-        new_file_name = f"{today_date}_{file_name.lower()}"
+        new_file_name = f"{creation_time}_{file_name.lower()}"
 
         # Construct the full paths
         old_path = os.path.join(directory_path, file_name)
