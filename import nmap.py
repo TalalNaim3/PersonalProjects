@@ -21,7 +21,7 @@ def nmap_scan(target_ip):
                 print(f'port : {port}\tstate : {nm[host][proto][port]["state"]}')
 
 # IP address that should be scanned
-target_ip = '68.40.152.238'
+target_ip = ''
 
 # Call the nmap scan function
 nmap_scan(target_ip)
